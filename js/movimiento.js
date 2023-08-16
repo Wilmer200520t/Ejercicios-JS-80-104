@@ -3,6 +3,9 @@ export function moviment(xred,yred,xplus, yplus,anch ,alt,e){
     $elmnt=window.getComputedStyle($pelt);
     let $posy=$elmnt.getPropertyValue('transform').split(',')[5].split(')')[0],
     $posx=$elmnt.getPropertyValue('transform').split(',')[4];
+    //alternativa 
+    //let $posbol=$pelt.getBoundingClientRect();//mapeo de posicion
+    //let $limit=$document.getElementById('cajon').getBoundingClientRect(); //
     if(e.key.match(xred)){
         if($posx>0){
             $pelt.style.setProperty('transform', `matrix(1, 0, 0, 1, ${$posx-10}, ${$posy})`);

@@ -7,7 +7,7 @@ const d=document;
 d.addEventListener('DOMContentLoaded',e=>{
     hambgrmMenu('.panel-btn','.panel','a');
     //cuenta regresiva
-    cuentaRegresiva('2023-08-17T16:30:00','cuentaRegresiva','Cuenta regresiva terminada');
+    cuentaRegresiva('2024-08-17T16:35:00','cuentaRegresiva','Cuenta regresiva terminada');
 });
 
 reloj();

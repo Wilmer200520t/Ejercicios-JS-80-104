@@ -1,10 +1,13 @@
 import hambgrmMenu from "./hamburguer.js";
 import {shortCd,moviment} from "./movimiento.js";
 import reloj from "./reloj.js";
+import cuentaRegresiva from "./cuentaR.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
     hambgrmMenu('.panel-btn','.panel','a');
+    //cuenta regresiva
+    cuentaRegresiva('2023-08-17T16:30:00','cuentaRegresiva','Cuenta regresiva terminada');
 });
 
 reloj();
@@ -34,5 +37,8 @@ d.addEventListener('keyup',e=>{
         shortCd('a','c','p',e);
         break;
     }
-    
 });
+
+//cuenta regresiva
+
+

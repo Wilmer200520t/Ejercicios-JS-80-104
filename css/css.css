@@ -141,3 +141,59 @@ img{
     transform: translate(0px,210px);/* maxx */
 
 }
+
+/*Estilos scroll top boton*/
+
+.scrolltop{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(4.25rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline:0;
+    border:0;
+    transition: all 0.3s ease-out; 
+}
+
+.scrolltop:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.ocultar{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/*dark mode*/
+
+.modedark{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    background-color: var(--second-color);
+    width: 4rem;
+    height: 4rem;
+    color: var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.oscuro{
+    background-color: var(--second-color);
+    color:var(--main-color);
+}
+
+.osucrobtn{
+    background-color: var(--main-color);
+}

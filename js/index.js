@@ -2,13 +2,22 @@ import hambgrmMenu from "./hamburguer.js";
 import {shortCd,moviment} from "./movimiento.js";
 import reloj from "./reloj.js";
 import cuentaRegresiva from "./cuentaR.js";
+import scrollUp from "./scroll.js";
+import darkmode from "./darkmode.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
     hambgrmMenu('.panel-btn','.panel','a');
     //cuenta regresiva
     cuentaRegresiva('2024-08-17T16:35:00','cuentaRegresiva','Cuenta regresiva terminada');
+
+    //scroll top bottom
+    scrollUp('.scrolltop');
+
+    //dark mode
+    darkmode('.modedark');
 });
+
 
 reloj();
 
@@ -38,7 +47,5 @@ d.addEventListener('keyup',e=>{
         break;
     }
 });
-
-//cuenta regresiva
 
 

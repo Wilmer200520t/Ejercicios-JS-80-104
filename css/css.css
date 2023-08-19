@@ -38,6 +38,8 @@ img{
     top: 0;
     background-color: var(--main-color);
     color: var(--second-color);
+    padding: 20px;
+    font: bold;
 }
 .header h2{
     margin: 0 auto;

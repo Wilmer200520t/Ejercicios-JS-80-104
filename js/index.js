@@ -13,9 +13,7 @@ d.addEventListener('DOMContentLoaded',e=>{
 
     //scroll top bottom
     scrollUp('.scrolltop');
-
-    //dark mode
-    darkmode('.modedark');
+    
 });
 
 
@@ -49,3 +47,5 @@ d.addEventListener('keyup',e=>{
 });
 
 
+//dark mode sacarlo del DOMcontentLoad para que no tenga error
+darkmode('.modedark');

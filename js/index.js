@@ -8,6 +8,7 @@ import responsive from "./responsiveD.js";
 import responsiveTester from "./pruba_respo.js";
 import deteccionDispositivos from "./Detecion.js";
 import estadoConexion from "./estadoConexion.js";
+import webCam from "./CamaraWeb.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
@@ -25,8 +26,9 @@ d.addEventListener('DOMContentLoaded',e=>{
     responsiveTester('responsiveTester');
     //deteccion de dispositivos
     deteccionDispositivos('dispositivos');
-    //estado conexion
-    estadoConexion('estadoConexion');
+    //deteccion de camara
+    webCam('webcam');
+    
 });
 
 
@@ -62,3 +64,5 @@ d.addEventListener('keyup',e=>{
 
 //dark mode sacarlo del DOMcontentLoad para que no tenga error
 darkmode('.modedark');
+//estado conexion
+estadoConexion('estadoConexion');

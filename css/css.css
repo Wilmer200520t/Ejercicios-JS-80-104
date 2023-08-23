@@ -204,7 +204,7 @@ img{
 .css{
     text-align: center;
     position: fixed;
-    z-index: 20;
+    z-index: 999;
     width: 100%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -214,8 +214,8 @@ img{
 
 .activo{
     background-color: #CEFF25;
-    position: relative;
     visibility: inherit;
+    position: sticky;
 }
 
 .desconectado{

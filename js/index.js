@@ -9,6 +9,8 @@ import responsiveTester from "./pruba_respo.js";
 import deteccionDispositivos from "./Detecion.js";
 import estadoConexion from "./estadoConexion.js";
 import webCam from "./CamaraWeb.js";
+import geolozalizacion from "./geolocalizacion.js";
+import filtros from "./filtro.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
@@ -28,6 +30,10 @@ d.addEventListener('DOMContentLoaded',e=>{
     deteccionDispositivos('dispositivos');
     //deteccion de camara
     webCam('webcam');
+    //geolozalizacion
+    geolozalizacion('logitud','latitud','rango');
+    //Filtro busqeda
+    filtros('input','.card');
     
 });
 
@@ -55,7 +61,6 @@ d.addEventListener('keyup',e=>{
         case 'a':
         case 'c':
         case 'p':
-        console.log(e.altKey);
         shortCd('a','c','p',e);
         break;
     }
@@ -66,3 +71,4 @@ d.addEventListener('keyup',e=>{
 darkmode('.modedark');
 //estado conexion
 estadoConexion('estadoConexion');
+

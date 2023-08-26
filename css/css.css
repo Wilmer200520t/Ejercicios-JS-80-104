@@ -34,6 +34,7 @@ img{
 
 /*menu hamburguesa*/
 .header{
+    z-index: 500;
     position: sticky;
     top: 0;
     background-color: var(--main-color);
@@ -243,7 +244,7 @@ img{
     color: var(--main-color);
 }
 
-img{
+.card img{
     width: 100%;
     height: auto;
 }
@@ -253,4 +254,65 @@ img{
     visibility: hidden;
     opacity: 0;
     order: 1;
+}
+
+/*********************************Responsive Slider********************************/
+.slider{
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;/*Se adpata a su padre*/
+    object-position: 50% 50%;
+}
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: thin solid #000;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.slider-boton{
+    position: absolute;
+    width: 100% ;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.slider a:hover{
+    color: #4d4d4d;
 }

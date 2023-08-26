@@ -11,6 +11,8 @@ import estadoConexion from "./estadoConexion.js";
 import webCam from "./CamaraWeb.js";
 import geolozalizacion from "./geolocalizacion.js";
 import filtros from "./filtro.js";
+import generador from "./generador.js";
+import slider from "./carrusel.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
@@ -34,6 +36,10 @@ d.addEventListener('DOMContentLoaded',e=>{
     geolozalizacion('logitud','latitud','rango');
     //Filtro busqeda
     filtros('input','.card');
+    //generador automatica
+    generador('.lenguajes','#btn');
+    //slider
+    slider();
     
 });
 

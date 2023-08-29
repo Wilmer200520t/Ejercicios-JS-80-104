@@ -13,6 +13,9 @@ import geolozalizacion from "./geolocalizacion.js";
 import filtros from "./filtro.js";
 import generador from "./generador.js";
 import slider from "./carrusel.js";
+import scrollSpy from "./scrollSpy.js";
+import smartVideo from "./smartVideo.js";
+import contactFormValidacion from "./formulario.js";
 const d=document;
 
 d.addEventListener('DOMContentLoaded',e=>{
@@ -40,7 +43,12 @@ d.addEventListener('DOMContentLoaded',e=>{
     generador('.lenguajes','#btn');
     //slider
     slider();
-    
+    //scrollSpy
+    scrollSpy();
+    //smart video
+    smartVideo('smartVideo');
+    //validacion de formularios
+    contactFormValidacion();
 });
 
 

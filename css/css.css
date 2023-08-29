@@ -316,3 +316,157 @@ img{
 .slider a:hover{
     color: #4d4d4d;
 }
+
+
+/********Scroll Spy**********************/
+
+@media screen and (min-width: 800px) {
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: "header header" "main panel";
+    }
+
+    main{
+        grid-area: main;
+
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        transform: translate(0,0);
+        top: 4rem;
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--second-color);
+        justify-content: flex-start;
+        align-self: self-start;
+        height: 90vh;
+    }
+
+    .panel-btn{
+        display: none;
+        
+
+    }
+
+    .menu{
+        justify-content: start;
+        text-align: right;
+        
+    }
+
+    .menu a{
+        font-size: 1rem;
+        padding: 1.2rem;
+        
+    }
+
+    .menu a:hover,
+    .menu a.active{
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+
+    .scrolltop{
+        right:initial;
+        left: calc(4.25rem + 1vw);
+        
+    }
+    section{
+        border: thin solid red;
+    }
+
+
+    /*************Formulario ***************/
+    .contact-form{
+        --form-ok-color:#4caf50;
+        --form-error-color:#f44336;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    
+    .contact-form > *{ /*dat estilo a todos los hijos*/
+        padding: 0.5rem;
+        margin: 1rem auto;
+        display: block;
+        width: 100%;
+    }
+
+    .contact-form textarea{
+        resize: none;
+    }
+
+    .contact-form legend,
+    .contact-form-response{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        font-size: 1rem;
+        font-family: sans-serif;
+    }
+
+    .contact-form input[type='submit']{
+        width: 40%;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .contact-form *::placeholder{
+        color: var(--second-color);
+    }
+
+
+    /*Validciones con CSS*/
+
+    .contact-form [required]:valid{
+        border: thin solid var(--form-ok-color);
+    }
+
+    .contact-form [required]:invalid{
+        border: thin solid var(--form-error-color);
+    }
+
+    .none{
+        display: none;
+    }
+
+    /*validaciones con span*/
+    .contact-form-error{
+        margin-top: -1rem;
+        font-size: 80%;
+        background-color: var(--form-error-color);
+        color: #fff;
+        transition: all 800ms ease;
+    }
+
+    .contact-form-error.is-active{
+        display: block;
+        animation: show-message 1s 1 normal 0s ease-out both;
+    }
+
+    @keyframes show-message{
+        0%{ 
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        100%{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+}
+
